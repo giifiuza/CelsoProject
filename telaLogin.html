@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
     <title>Login</title>
 </head>
-<body>
-    <div class="box-login">
-        <section>
-            <label for="usuario" >Usuário: </label>
-            <input type="text" class="input-login" id="name" name="name" value="" required=""><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" class="input-login" id="password" name="password" placeholder="Senha" required=""><br><br>
 
-            <button type="button" >Login</button>
-        </section>  
-            
-    </div>
+<body>
+    <main>
+        <div id="all-login">
+            <div class="box-login">
+                <section>
+                    <h1>LOGIN</h1>
+                    <label for="usuario" class="label">Usuário:</label>
+                    <input type="text" class="input-login" id="name" name="name" value="" required=""><br><br>
+
+                    <label for="password" class="label ">Senha:</label>
+                    <input type="password" class="input-login" id="password" name="password" required=""><br><br>
+
+                    <button class="bt-login" onclick= Login()>Login</button>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
+<script src="./login.js"></script>
+
 </html>
