@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./cadastro.css">
+	<title>Cadastro de IDs</title>
+</head>
+<body>
+	<script src="./cadastro.js"></script>
+	
+	<div class="container" id="container">
+		
+		<div class="second-container">
+			<img src="./images/cadastro2.png">
+			<div class="overlay">
+			</div>
+		</div>
+		<div class="form-container">
+			<form action="#">
+				<h1>Cadastro de IDs </h1>
+				<label for="usuario" class="label" >Nome:</label>
+				<input type="text" placeholder="Nome" id="name"/>
+				<label for="password" class="label">ID:</label>
+				<input type="number" placeholder="ID" id="id" />
+
+				<button onclick="Login()">Cadastrar</button>
+				<button id="bt-voltar"><a href="telaOpcoes.html">Voltar</a></button>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
