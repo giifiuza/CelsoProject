@@ -1,20 +1,20 @@
 function Login() {
 
-    var usuario = document.getElementById('name').value;
+    var usuario = document.getElementById('usuario').value;
     usuario=usuario.toLowerCase();
-    var senha= document.getElementById('password').value;
+    var senha= document.getElementById('senha').value;
     senha=senha.toLowerCase();
+
     if (usuario=="admin" && senha=="admin") {
-        window.location.href = "/telaCadastro.html"
+        window.location.href="./telaOpcoes.html";
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Wrong user!',
+            footer: 'Please try again!'
+          })
+    }
 
-         if(usuario == "" || senha == "") { 
-             alert("Os campos usuário e senha são obrigatório"); }
-             
-              if(usuario =! "admin" || senha != "admin"){
-                alert("Usuário não cadastrado!")
-             }
-             else (usuario=="admin" && senha=="admin");
-                 alert("Login realizado com sucesso!")
-
-             }
-            }
+}
+            
