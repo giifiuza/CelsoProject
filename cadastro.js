@@ -1,4 +1,4 @@
-function Login() {
+async function Login() {
 
     var usuario = document.getElementById('name').value;
     usuario=usuario.toLowerCase();
@@ -14,8 +14,28 @@ function Login() {
         
 
          if(usuario == "root" || id == "123456789") { 
+             const request = {
+                 "nome": usuario,
+                 "id": id
+             }
+             
+             const header = {
+                 method: 'POST',
+                 headers: {
+                     'Accept': 'application/json',
+                     'Content-Type': 'application/json'
+                 },
+                 body: JSON.stringfy(request)
+             }
+             
+             console.log(header)
+             
+             await fetch('http://192.168.234.137:8080/', header)
+             .then((Response) => Response.json())
+             .then((data) => {
+                 console.log(data)
+             })
             Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'cadastro realizado',
                 showConfirmButton: false,
@@ -28,4 +48,5 @@ function Login() {
 
              }
             }
+        
         
