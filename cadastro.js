@@ -5,15 +5,7 @@ async function Login() {
     var id= document.getElementById('id').value;
     id=id.toLowerCase();
     if (usuario !="" && id !="") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!',
-            footer: 'Please try again!'
-          })
-        
-
-         if(usuario == "root" || id == "123456789") { 
+          
              const request = {
                  "nome": usuario,
                  "id": id
@@ -25,12 +17,12 @@ async function Login() {
                      'Accept': 'application/json',
                      'Content-Type': 'application/json'
                  },
-                 body: JSON.stringfy(request)
+                 body: JSON.stringify(request)
              }
              
              console.log(header)
              
-             await fetch('http://192.168.234.137:8080/', header)
+             await fetch('https://access-system.azurewebsites.net/post', header)
              .then((Response) => Response.json())
              .then((data) => {
                  console.log(data)
@@ -44,7 +36,7 @@ async function Login() {
             
             
               
-             }
+             
 
              }
             }
