@@ -1,96 +1,94 @@
 * {
-    margin:0;
-    padding:0;
-}
-
-
-html {
-    width:100%;
-    height:100%;
-}
-
-body{
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
     width: 100%;
     height: auto;
     background-image: url("images/login2\ \(1\)\ \(1\).jpg");
-    
-}
-
-section {
-    padding: 50px;
-}
-.box-login{
-    width: 23%;
-    align-items: center;
-    text-align: center;
+    background-size: cover;
+  }
+  
+  section {
+    padding: 5%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    margin-top: 18%;
-    margin-left: 38%;
+    flex-direction: column;
+  }
+  
+  .box-login {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10%;
     border-radius: 10px;
-    position: relative;
     box-shadow: 0px 0px 5px 5px rgb(197, 197, 197);
+    background-color: rgb(255, 255, 255);
     opacity: 0.97;
-}
-
-.box-login h1{
+  }
+  
+  .box-login h1 {
     font-family: Josefin Sans;
-    font-size:35px; 
-    letter-spacing:10px; 
-    color:rgb(219, 15, 15);
-    padding: 5px;
+    font-size: 35px;
+    letter-spacing: 10px;
+    color: rgb(219, 15, 15);
+    padding: 5%;
     margin-bottom: 25px;
-
-}
-.all-login{
-    display: flex;
     text-align: center;
+  }
+  
+  .all-login {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.input-login{
-    font-size:1em; 
-    color:#413f3f; 
-    font-family:'open_sansregular'; 
-    outline:none; 
-    border:1px #dee5ed solid; 
-    border-radius:4px; 
-    padding:0.6em; 
+  }
+  
+  .input-login {
+    font-size: 1em;
+    color: #413f3f;
+    font-family: "open_sansregular";
+    outline: none;
+    border: 1px #dee5ed solid;
+    border-radius: 4px;
+    padding: 0.6em;
     background-color: #f5f3f3;
-    
-}
-
-.bt-login{
-    background-color:rgb(219, 15, 15); 
-    width:30%; 
-    display:block; 
-    margin:auto;  
-    border-radius:3px;  
-    border:0; 
-    padding:0.8em 0em; 
-    color:#fff; 
-    font-size:1.3em; 
-    font-family: Josefin Sans; 
-    text-align: center;   
+    width: 90%;
+    margin-bottom: 2%;
+  }
+  
+  .bt-login {
+    background-color: rgb(219, 15, 15);
+    width: 70%;
+    max-width: 200px;
+    border-radius: 3px;
+    border: 0;
+    padding: 0.8em 0em;
+    color: #fff;
+    font-size: 1.3em;
+    font-family: Josefin Sans;
+    text-align: center;
+    margin: auto;
     margin-top: 20px;
     transition: all ease-in-out 0.5s;
-}
-
-.bt-login a{
+  }
+  
+  .bt-login a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
-
-.label{
-    font-family: Josefin Sans ;
-}
-
-.bt-login:hover {
+  }
+  
+  .label {
+    font-family: Josefin Sans;
+  }
+  
+  .bt-login:hover {
     transform: scale(1.095);
     transition: all ease-in-out 0.5s;
-}
-
+  }
+  
