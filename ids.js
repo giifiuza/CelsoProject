@@ -1,4 +1,4 @@
-function listatabela(nome, id, ){
+function listatabela(nome, id){
     var tb = document.getElementById("tbody")
     var qtdLinhas = tb.rows.lenght;
     var linha = tb.insertRow(qtdLinhas);
@@ -9,7 +9,7 @@ function listatabela(nome, id, ){
 
     cellid.innerHTML = id;
     cellnome.innerHTML = nome;
-    cellremover.innerHTML = '<button>excluir</button>';
+    cellremover.innerHTML = '<button onclick="removerElemento(event.target)" class="butao">excluir</button>';
 
  }
 
@@ -27,12 +27,38 @@ function carrega(){
         catch(error){
             console.log("deu erro")
         }
-        while(document.getElementById('tbody').rows.length > data['message'].length){
-            document.getElementById('tbody').deleteRow(0);
-        }
     }
     )
 }
+
+function removerElemento(elementoClicado) {
+    console.log("a")
+    const request = {
+        "nome": elementoClicado.closest("tr").getElementsByTagName("td")[1].innerText
+    }
+
+    const header = {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(request)
+    }
+    fetch('https://access-system.azurewebsites.net/delete', header)
+            .then((Response) => Response.json())
+            .then((data) => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User deleted',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+
+    elementoClicado.closest("tr").remove();
+
+  }
 
 
 

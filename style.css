@@ -19,6 +19,7 @@
     padding: 5%;
     display: flex;
     flex-direction: column;
+    margin-top: 17rem;
   }
   
   .box-login {

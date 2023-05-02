@@ -1,18 +1,65 @@
-#tbids{
-    width: 100%;
-    min-height: 100vh;
-    background: #fff;
-    /* display: -webkit-box; */
-    /* display: -webkit-flex; */
-    display: -moz-box;
-    display: -ms-flexbox;
+
+
+  body {
     display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 33px 30px;
+  }
+
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 10px;
+    line-height: 2.8;
+  }
+thead{
+    background-color: #0896c5;
+    border-radius: 10px;
+    padding: 30px;
+    border-collapse: collapse;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+tbody{
+    font-family: Lato-Regular;
+    color: gray;
+    font-size: 18px;
+
 }
 
-.cell{
-   display: table-cell;
+tbody tr td{
+    text-align: center;
+}
+
+thead tr{
+    padding: 50px;
+    background-color: #0896c5;
+    border-radius: 10px;
+}
+
+thead tr td{
+    text-align: center;
+    background-color: #0896c5;
+}
+
+#id{
+    border-radius: 10px 0 0 0;
+}
+
+#remover{
+    border-radius: 0 10px 0 0;
+}
+
+#dados{
+    overflow: scroll;
+    height: 40vh;   
 }
