@@ -9,7 +9,7 @@ function listatabela(nome, id){
 
     cellid.innerHTML = id;
     cellnome.innerHTML = nome;
-    cellremover.innerHTML = '<button onclick="removerElemento(event.target)" class="butao">excluir</button>';
+    cellremover.innerHTML = '<button onclick="removerElemento(event.target)" class="butao">EXCLUIR</button>';
 
  }
 

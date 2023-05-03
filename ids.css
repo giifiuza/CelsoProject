@@ -1,24 +1,26 @@
 
 
-  body {
+body {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  table{
+table{
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    width: 50em;
+    width: 100%;
+    max-width: 50em;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     border-radius: 10px;
     line-height: 2.8;
-  }
+}
+
 thead{
     background-color: #0896c5;
     border-radius: 10px;
@@ -38,6 +40,7 @@ tbody{
 
 tbody tr td{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 thead tr{
@@ -62,4 +65,35 @@ thead tr td{
 #dados{
     overflow: scroll;
     height: 40vh;   
+}
+
+.butao{
+    background-color: red;
+    border: 1px solid red;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even){
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    table {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        font-size: 10px;
+    }
 }
