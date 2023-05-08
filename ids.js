@@ -15,7 +15,7 @@ function listatabela(nome, id){
 
 
 function carrega(){
-    fetch("https://access-system.azurewebsites.net/get")
+    fetch("https://apiprojetocelso.azurewebsites.net/get")
     .then((Response) => Response.json())
     .then((data) => {   
         
@@ -45,7 +45,7 @@ function removerElemento(elementoClicado) {
         },
         body: JSON.stringify(request)
     }
-    fetch('https://access-system.azurewebsites.net/delete', header)
+    fetch('https://apiprojetocelso.azurewebsites.net/delete', header)
             .then((Response) => Response.json())
             .then((data) => {
                 Swal.fire({
