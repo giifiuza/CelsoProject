@@ -32,7 +32,7 @@ async function Login() {
 
         console.log(header)
     try{
-        fetch('https://access-system.azurewebsites.net/post', header)
+        fetch('https://apiprojetocelso.azurewebsites.net/post', header)
             .then((Response) => Response.json())
             .then((data) => {
                 console.log(data)
